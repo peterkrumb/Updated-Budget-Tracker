@@ -7,4 +7,6 @@ There are 3 primary ways to make a desktop app into a PWA: service worker, manif
 * Webpack is a tool that manages JavaScript dependencies. It allows you to import JavaScript code from libraries and bundles your JavaScript together into one or many files.
 
 ## Other steps
-* The other step you need to take is you have to add the script for dist as in your index.html. Dist is the folder containing the bundle.js created by webpack.
+* You have to add the script for the bundle in your index.html. Dist is the folder containing the bundle.js created by webpack, so /dist/bundle.
+* The entry point in the webpack.config file must be the js files you are implementing in the app
+* Must add "prestart": "npm run webpack" into package.json so the webpack is built when you type npm start in the terminal
